@@ -7,6 +7,6 @@ sock.bind((myIP, myPort))
 
 while True:
   data, addr = sock.recvfrom(1024)
-  print("received message: {}".format(data))
+  print("received message: {}".format(data.decode()))
   if input("Ketik 1 dan tekan enter untuk berhenti menerima pesan (isi dengan yang lain untuk melanjutkan menerima pesan): ") == "1":
     break
